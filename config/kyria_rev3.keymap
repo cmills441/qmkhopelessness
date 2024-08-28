@@ -19,25 +19,25 @@
 
 / {
     macros {
-        macro_2: macro_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ENTER &kp TAB>;
-            label = "MACRO_1";
-        };
-
-        macro_3: macro_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp ENTER &kp TAB &kp DOUBLE_QUOTES>;
-            label = "MACRO_2";
-        };
-
-        macro_4: macro_1 {
+        speak_friend: speak_friend {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(C) &kp A &kp R &kp B &kp O &kp N &kp DLLR &kp DLLR &kp N0 &kp N5>;
-            label = "MACRO_1";
+            label = "SPEAK_FRIEND";
+        };
+
+        new_paragraph: new_paragraph {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &kp TAB>;
+            label = "NEW_PARAGRAPH";
+        };
+
+        begin_quote: begin_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &kp TAB &kp DOUBLE_QUOTES>;
+            label = "BEGIN_QUOTE";
         };
     };
 
@@ -52,10 +52,10 @@
             //                     | GUI  | DEL  | RET  |  SPACE  |   ESC   |  |   RET   |  SPACE  | TAB  | BSPC  | R-ALT |
 
             bindings = <
-&kp TAB    &kp SQT        &kp COMMA  &kp PERIOD  &kp P  &kp Y                                                        &kp F      &kp G     &kp C     &kp R  &kp L  &kp ESCAPE
-&macro_4   &kp A          &kp O      &kp E       &kp U  &kp I                                                        &kp D      &kp H     &kp T     &kp N  &kp S  &kp FSLH
-&kp LSHFT  &kp SEMICOLON  &kp Q      &kp J       &kp K  &kp X          &kp UP_ARROW  &kp DOWN  &kp LEFT   &kp RIGHT  &kp B      &kp M     &kp W     &kp V  &kp Z  &kp RIGHT_SHIFT
-                                     &kp LGUI    &mo 1  &kp BACKSPACE  &macro_2      &mo 2     &kp ENTER  &kp MINUS  &kp SPACE  &macro_3  &kp RALT
+&kp TAB        &kp SQT        &kp COMMA  &kp PERIOD  &kp P  &kp Y                                                          &kp F      &kp G         &kp C     &kp R  &kp L  &kp ESCAPE
+&speak_friend  &kp A          &kp O      &kp E       &kp U  &kp I                                                          &kp D      &kp H         &kp T     &kp N  &kp S  &kp FSLH
+&kp LSHFT      &kp SEMICOLON  &kp Q      &kp J       &kp K  &kp X          &kp UP_ARROW    &kp DOWN  &kp LEFT   &kp RIGHT  &kp B      &kp M         &kp W     &kp V  &kp Z  &kp RIGHT_SHIFT
+                                         &kp LGUI    &mo 1  &kp BACKSPACE  &new_paragraph  &mo 2     &kp ENTER  &kp MINUS  &kp SPACE  &begin_quote  &kp RALT
             >;
 
             sensor-bindings =
