@@ -33,7 +33,7 @@
             label = "MACRO_2";
         };
 
-        macro_1: macro_1 {
+        macro_4: macro_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(C) &kp A &kp R &kp B &kp O &kp N &kp DLLR &kp DLLR &kp N0 &kp N5>;
@@ -53,7 +53,7 @@
 
             bindings = <
 &kp TAB    &kp SQT        &kp COMMA  &kp PERIOD  &kp P  &kp Y                                                        &kp F      &kp G     &kp C     &kp R  &kp L  &kp ESCAPE
-&macro_1   &kp A          &kp O      &kp E       &kp U  &kp I                                                        &kp D      &kp H     &kp T     &kp N  &kp S  &kp FSLH
+&macro_4   &kp A          &kp O      &kp E       &kp U  &kp I                                                        &kp D      &kp H     &kp T     &kp N  &kp S  &kp FSLH
 &kp LSHFT  &kp SEMICOLON  &kp Q      &kp J       &kp K  &kp X          &kp UP_ARROW  &kp DOWN  &kp LEFT   &kp RIGHT  &kp B      &kp M     &kp W     &kp V  &kp Z  &kp RIGHT_SHIFT
                                      &kp LGUI    &mo 1  &kp BACKSPACE  &macro_2      &mo 2     &kp ENTER  &kp MINUS  &kp SPACE  &macro_3  &kp RALT
             >;
